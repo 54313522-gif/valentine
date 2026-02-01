@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For You 🤍</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        border: 1px solid white;
+        border-radius: 30px;
+        color: white;
+        text-decoration: none;
+        font-family: "Playfair Display", serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: radial-gradient(circle at top, #3b1d2a, #120810);
+        color: #fff;
+        font-family: "Playfair Display", serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      /* floating particles */
+      .particle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        animation: rise linear infinite;
+      }
+
+      @keyframes rise {
+        from {
+          transform: translateY(110vh);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(-10vh);
+          opacity: 1;
+        }
+      }
+
+      .content {
+        text-align: center;
+        max-width: 750px;
+        padding: 40px;
+        animation: fadeIn 2s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        font-family: "Great Vibes", cursive;
+        font-size: 4rem;
+        font-weight: normal;
+        margin-bottom: 20px;
+      }
+
+      .message {
+        font-family: "Great Vibes", cursive;
+        font-size: 2.3rem;
+        line-height: 1.6;
+        opacity: 0.95;
+      }
+
+      .message2 {
+        font-family: "Great Vibes", cursive;
+        font-size: 1rem;
+        line-height: 1.6;
+        opacity: 0.95;
+        border-radius: 15px;
+        border-left: 10px;
+        border-right: 10px;
+      }
+      .signature {
+        margin-top: 40px;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement("div");
+        p.className = "particle";
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.animationDuration = 10 + Math.random() * 10 + "s";
+        document.body.appendChild(p);
+      }
+    </script>
+
+    <div class="content">
+      <h1>For You</h1>
+
+      <div class="message">
+        Somehow, in a world full of moments and chances, my heart learned your
+        name.
+        <br /><br />
+        And quietly, without asking, it chose you.
+      </div>
+
+      <div class="signature">— From My Heart</div>
+      <br />
+      <a href="page2.html" target="_self" class="btn">Continue</a>
+    </div>
+  </body>
+</html>
